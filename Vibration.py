@@ -56,7 +56,7 @@ def handle_rotation_data(handle, value_bytes):
         ser.write('1')
         time.sleep(2)
         ser.write('0')
-        # global nudged
+        global nudged
         nudged = True
 
 
