@@ -51,11 +51,13 @@ def handle_rotation_data(handle, value_bytes):
     find_or_create("Left Wheel Rotation",
                    PropertyType.TWO_DIMENSIONS).update_values(rotation_values)
 
+
+    global nudged
     if rotation_values[0] > RECOMMENDED_NUM_ROTATION and not nudged:
         ser.write('1')
         time.sleep(2)
         ser.write('0')
-        global nudged
+        # global nudged
         nudged = True
 
 
