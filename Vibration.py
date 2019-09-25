@@ -24,7 +24,7 @@ ADDRESS_TYPE = pygatt.BLEAddressType.random
 # Recommended number of rotation
 RECOMMENDED_NUM_ROTATION = 10
 # Did we already nudged
-nudged = False
+# nudged = False
 
 # Start reading the serial port
 ser = serial.Serial(
@@ -57,6 +57,7 @@ def handle_rotation_data(handle, value_bytes):
         ser.write('0')
         global nudged
         nudged = True
+
 
 def keyboard_interrupt_handler(signal_num):
     """Make sure we close our program properly"""
