@@ -19,6 +19,6 @@ Sensors: Button, IMU, GPS
 
 # Progress of last week
 We tried to follow the tutorials to set up the internet connection between Raspberry pi and DCD hub, and the bluetooth connection between raspberry pi and Feathure. We used the example code and successfully turned on the LED.
-![greenLight](https://lh3.googleusercontent.com/rNjc5xhIxvdAsmhu81ta1KBaB9rxc7ReN7kaM3VllXBXfxmiJrCXVoTS_eTbcyXV0DRNfYePTcxuBbGZHuerl_KJpssZoK4JgBO1fkosKozJ6jtz8ygwSljxdpyUwnMCuKIHx5e0Ks_NF9-mnkIaL9-8gVfuaSr_KVb56TAnIA8H-4s-oJw7wQAtN4cxsWbqdSSMsdinN8oZdNMFaZuPCY6KpKhKZ8zZ9HFXDvk3M-EG_hC8X3QwC5V_MDTSSA8R8zYiT0l8cY0ifU2oh3k58SwqcWxc7bOGDqN7AFJKWnx15di3w4Q0rs75yHZ63Mkt4jxcb5c3QLPKjQBUyBx-Nky8WB-UILgUAcq2TEDX-q8blhSlMVs1vdLi4BUNBC0LbtW9IhhasvJRA9pXN3JPgY7eWjc_cZKwlLr2rqQkQvgSaaKfcApGtWsBfHu2VBz_MAgPr4AudZxDV6Zrab-Cjv9wVyHQ6fA2MEzpNa3rxYu-iY3r7A6tNg33f9ylA5Zw0Yi06d33KFfWyHQj__I0k8kAboRPrx0TeigSq522aRTqH0TV0T0u5qCQbCyGs4oRcU7Qv2igw_XNAIT7TW7tIBCZQ6A_cG--dM0Nx505eACrbkpno2PopcWk42_qNbH3nTtEhGuUxKJ1ua3QUorCpZdcLo99sCM1zVJoJx3LKXRDRk3BtBsagQo=w1124-h843-no)
+
 When switching the LED to the IMU, the bluetooth connection is not working and took us almost the whole week to degug the issue.
 Since our IMU will be atached to the wheelchair, Bluetooth is then not neccessary for us. We decided to used USB cable for the Serial communication between Arduino and Raspberry Pi. We have therefore hooked IMU onto Arduino mega instead. The Arduino code bno055_rotations.ino will be used. 
