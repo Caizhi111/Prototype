@@ -5,11 +5,31 @@
     <title></title>
     <script src="https://d3js.org/d3.v3.min.js" language="JavaScript"></script>
     <script src="{{url_for('static', filename='js/liquidFillGauge.js')}}" language="JavaScript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+                integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I="
+                crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8">
+      var socket = io();
+      socket.on('connect', function() {
+        // socket.emit('json', {data: 'I\'m connected!'});
+      });
+
+      socket.on('json', function(msg, cb) {
+        if (msg.data !== undefined) {
+          gauge1.update(msg.data)
+        }
+      });
+
+      function sendMessage(message) {
+        socket.emit('json', {data: NewValue()});
+      }
+    </script>
     <style>
         .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
     </style>
 </head>
 <body>
+    <button onclick="sendMessage('click!')">Click!</button>
 <svg id="fillgauge1" width="97%" height="250" onclick="gauge1.update(NewValue());"></svg>
 <svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
 <svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>
