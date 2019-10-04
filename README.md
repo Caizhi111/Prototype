@@ -3,7 +3,7 @@ Prototype connected products tudelft group 9
 By zhicai Ryan
 
 # Design Brief Navigation system for Wheelshair users
-This navigation system specially designed for the wheelchair users to find the most suitable way to the wanted destination. It helps to select the ideal route based on the feedback of the road conditions and the user experience from other users. 
+This navigation system specially designed for the wheelchair users to find the most suitable way to the wanted destination. It helps to select the ideal route based on the feedback of the road conditions and the user experience from other users.
 
 # Selection of Sensors and Actuators
 Sensors: Button, IMU, GPS
@@ -21,9 +21,8 @@ Sensors: Button, IMU, GPS
 We tried to follow the tutorials to set up the internet connection between Raspberry pi and DCD hub, and the bluetooth connection between raspberry pi and Feathure. We used the example code and successfully turned on the LED.
 
 When switching the LED to the IMU, the bluetooth connection is not working and took us almost the whole week to degug the issue.
-Since our IMU will be atached to the wheelchair, Bluetooth is then not neccessary for us. We decided to used USB cable for the Serial communication between Arduino and Raspberry Pi. We have therefore hooked IMU onto Arduino mega instead. The Arduino code bno055_rotations.ino will be used. 
+Since our IMU will be atached to the wheelchair, Bluetooth is then not neccessary for us. We decided to used USB cable for the Serial communication between Arduino and Raspberry Pi. We have therefore hooked IMU onto Arduino mega instead. The Arduino code bno055_rotations.ino will be used.
 
 # .env
-THING_ID=group-9-wheelchair-df49
-THING_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1Njk4MzA1MTMsImV4cCI6MTg4NTQxMDExMywiYXVkIjoiaHR0cHM6Ly9kd2QudHVkZWxmdC5ubDo0NDMvYXBpIn0.HxNI-eI1fiPG_rQENeHM9j6-g6SbK1NJHXZRRIQtv2qEro9dwzlN7MiPNGZtYZBABWa_U5A2PNdGNRsGRb80eVFjMDcLtjNHIBFHqZKCQEJAGY2HRXsLHJEy_hYOCjV81vmU4IKpizAhsx0HScrj1YERxPeSswTZuG4P_46hsID5EZibPxiJl96IDRcr7Mj_a2kfz9I41z1Tl3dd1DDJXifeGFvg9UQk6De-N4u1piwW8QRdSBoJHH1c4wUEcLJBt9frlFAKBGR8QJOCPH35xKCHE5KHTjYPmj8uAVH_c-w1-etTeeL5rE_OZkMppY4nTRW8YNbEU2vL1iCCEBfrMomieLz2OwrapP_1yGaEBOfj9ajlrKrUtiHycJpU7xaKzwMYILnpvL00F_GtgGxU5oQRIXhOUrj1SNPGQmx_ZMI4V_Nhi0yc_Ztz-SgYLp6Z2s4QIm5M9Z1XJ_qHg5tKsdDp_JT8bjF0WZOFvdBlo8VAQEoQOR0tk5NN68L5kWFdKsoDgREJLqVhCMFfWZCieWQC4Xt7_WgOGParOvXW3BgYDZ4Da9ssLnBIxAb2hVp4AR23DCgQma32XbxFPYE9nMQmSylcjZDZswAZqw8W6z64-y3D6C8qPzvSHzm7rxV4DvbzvvOyKCnEydvnbSbYg2LbXABXsv_d9hab8QVXryg
-
+THING_ID=my1wheelchair-b5a0
+THING_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzAxNjgyNzIsImV4cCI6MTg4NTc0Nzg3MiwiYXVkIjoiaHR0cHM6Ly9kd2QudHVkZWxmdC5ubDo0NDMvYXBpIn0.KldzQIk2U8LDUSyc_m7PMZgbWoNeU9BWcpJqviDVnAKc48S66AtATXZZrA5efkIJG5aRZj8DXQcRhBaaPNrLbcE8osWuivHWW9vf6m54YouAVE2Q9Tyxg5KiApmTUo7FvY_EehlGdFuba93DT4n66Izf1vOMQRbnPPlgUDGB0WuIrnnkST5p7SZ5PFPgFu-LAjVjUKnTUoAIElp169e2eJRupudnuOYVYy68ToyNBqdMuT-nEPBrIfnhFVno31hg04xhiOWrnxYEOSmJBh_1SWXbGxlUlsN48jSqz6E_EKrQ_3xbVu_48wenSRKP_20Bm1hXKI5bIQ1Bi1jLlT00k1iwOJD3wDlDbqSyuFaRi54CtX4z7Uso5bX-l7p7SUjhUwC2aS51-SKTiVVx1TtmxGlQtu66oIl9ul1M6K5TON7MeIur5_FbanAHd8MtcdHRM-7Da5S4utZ8Cf6I0TeAwb-sxm16GtReLJnh2haaISALL1CujHdsiWwKMeXtlSXZgRTQOCsRVeXQcbk3BNPr7e4EmHgpg5J-9z02bFp9fUwhx5E2g7ZaxyffbG7jUpJ4rrPDyLBJFNYpzrQFEM_3Eg6AEZh4IB0O6TdKcq3ykafefXLkHrZK183RCd6HY3JVfThQEpT0g2hpz5ioMbaLJOQVUft71vUpOMiIY8L_6h4
