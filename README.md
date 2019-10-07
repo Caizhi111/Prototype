@@ -28,7 +28,7 @@ Changes in the IoT structure, we use:
   - IMU instead of MPU
   - University WIFI instead of SMS module for prototyping purpose
   - API to instant messagers to send emergency messages to care givers (whatsapp, wechat....)
-  
+
 The challenges we have:
   - Fall-down detection condition for IMU code
   - set up camera and refresh the footage every 30s
@@ -40,6 +40,8 @@ We tried to follow the tutorials to set up the internet connection between Raspb
 
 When switching the LED to the IMU, the bluetooth connection is not working and took us almost the whole week to degug the issue.
 Since our IMU will be atached to the wheelchair, Bluetooth is then not neccessary for us. We decided to used USB cable for the Serial communication between Arduino and Raspberry Pi. We have therefore hooked IMU onto Arduino mega instead. The Arduino code bno055_rotations.ino will be used.
+
+We figured out the api for wechat. We are able to send message to a specific people via api. One problem is that to log in wechat, we need to scan the QR code, which means we probably need a screen connected to raspberry pi.
 
 # week 1.4
 
