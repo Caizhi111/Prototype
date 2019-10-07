@@ -28,7 +28,7 @@ my_thing.read()
 # Start reading the serial port
 ser = serial.Serial(
     port = os.environ['SERIAL'],
-    baudrate = 9600,
+    baudrate = 115200,
     timeout = 2)
 
 # Read the next line from the serial port
