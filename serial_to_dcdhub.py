@@ -25,8 +25,6 @@ my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 # i.e. retrieving its information from the hub
 my_thing.read()
 
-my_property = my_thing.find_or_create_property("ACCELEROMETER = ",
-                                               PropertyType.THREE_DIMENSIONS)
 # Start reading the serial port
 ser = serial.Serial(
     port = os.environ['SERIAL'],
