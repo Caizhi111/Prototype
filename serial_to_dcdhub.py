@@ -44,9 +44,9 @@ def serial_to_property_values():
         values = line.split(',')
         # Use the first element of the list as property id
         property_id = values.pop(0)
-        x = values.pop(1)
-        y = values.pop(2)
-        z = values.pop(3)
+        #x = values.pop(1)
+        #y = values.pop(2)
+        #z = values.pop(3)
         # Get the property from the thing
         prop = my_thing.properties[property_id]
         # If we find the property, we update the values (rest of the list)
