@@ -40,6 +40,7 @@ def serial_to_property_values():
     if len(line_bytes) > 0:
         # Convert the bytes into string
         line = line_bytes.decode('utf-8')
+        print(line)
         # Split the string using commas as separator, we get a list of strings
         values = line.split(',')
         # Use the first element of the list as property id
