@@ -11,7 +11,7 @@ import random
 import sys
 
 #fourcc = cv2.VideoWriter_fourcc(*'MJPG')
-fourcc = cv2.VideoWriter_fourcc(*'MP4V')
+fourcc = cv2.VideoWriter_fourcc(*'X264')
 #fourcc = cv2.VideoWriter_fourcc(*'XVID')
 #out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
 
