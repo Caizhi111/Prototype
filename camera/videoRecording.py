@@ -26,7 +26,7 @@ print("ALl logs saved in dir:", name)
 os.mkdir(name)
 
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 cur_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
 
@@ -46,7 +46,7 @@ while cap.isOpened():
         if time.time() - start > 10: #Every ten seconds save the video in created directory file
             start = time.time()
             video_file_count = 1
-            video_file = os.path.join(name, str(video_file_count) + ".mp4")
+            video_file = os.path.join(name, str(video_file_count) + ".avi")
             out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
             # No sleeping! We don't want to sleep, we want to write
             # time.sleep(10)
