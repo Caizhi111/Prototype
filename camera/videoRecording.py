@@ -26,7 +26,7 @@ print("ALl logs saved in dir:", name)
 os.mkdir(name)
 
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 cur_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
 
