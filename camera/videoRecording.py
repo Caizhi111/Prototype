@@ -48,7 +48,7 @@ while cap.isOpened():
         cv2.imshow("frame", frame)
         if time.time() - start > 10: #Every ten seconds save the video in created directory file
             start = time.time()
-            video_file_count = 1
+            #video_file_count = 1
             video_file = os.path.join("video", "1" + ".mp4")
             out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
             # No sleeping! We don't want to sleep, we want to write
