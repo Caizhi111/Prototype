@@ -28,7 +28,12 @@ video_file = os.path.join("video", "1" + ".avi")
 print("Capture video saved location : {}".format(video_file))
 
 # Create a video write before entering the loop
-out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
+# out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
+ret, frame = cap.read()
+cv2.imshow("frame", frame)
+cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
+cv2.VideoWriter.write(frame)
+
 #
 # while cap.isOpened():
 #     start_time = time.time()
@@ -51,5 +56,5 @@ out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
 #         break
 
 cap.release()
-out.release()
+# out.release()
 cv2.destroyAllWindows()
