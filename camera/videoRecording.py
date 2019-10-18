@@ -29,26 +29,26 @@ print("Capture video saved location : {}".format(video_file))
 
 # Create a video write before entering the loop
 out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
-
-while cap.isOpened():
-    start_time = time.time()
-    ret, frame = cap.read()
-    if ret == True:
-        cv2.imshow("frame", frame)
-        if time.time() - start > 10: #Every ten seconds save the video in created directory file
-            start = time.time()
-
-            video_file = os.path.join("video", "1" + ".mp4")
-            out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
-            # No sleeping! We don't want to sleep, we want to write
-            # time.sleep(10)
-
-        # Write the frame to the current video writer
-        out.write(frame)
-        if cv2.waitKey(1) & 0xFF == ord("q"):
-            break
-    else:
-        break
+# 
+# while cap.isOpened():
+#     start_time = time.time()
+#     ret, frame = cap.read()
+#     if ret == True:
+#         cv2.imshow("frame", frame)
+#         if time.time() - start > 10: #Every ten seconds save the video in created directory file
+#             start = time.time()
+#
+#             video_file = os.path.join("video", "1" + ".mp4")
+#             out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
+#             # No sleeping! We don't want to sleep, we want to write
+#             # time.sleep(10)
+#
+#         # Write the frame to the current video writer
+#         out.write(frame)
+#         if cv2.waitKey(1) & 0xFF == ord("q"):
+#             break
+#     else:
+#         break
 
 cap.release()
 out.release()
