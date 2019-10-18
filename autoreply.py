@@ -3,7 +3,7 @@ import itchat
 itchat.auto_login(hotReload=True)
 
 print(itchat.search_friends(name = '1rene'))
-users = itchat.search_friends(name = '何雨菲') 
+users = itchat.search_friends(name = '1rene')
 #contact = u'ai'
 contact_person = users[0]['UserName']
 print(contact_person)

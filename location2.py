@@ -1,17 +1,10 @@
-import itchat
 from googleplaces import GooglePlaces
 import googlemaps
+
 import sys
 from imp import reload
 
 reload(sys)
-
-itchat.auto_login(hotReload=True)
-
-users = itchat.search_friends(name = '何雨菲')
-#contact = u'ai'
-contact_person = users[0]['UserName']
-print(contact_person)
 
 class GoogleMaps(object):
     """提供google maps服务"""
@@ -148,21 +141,8 @@ if __name__ == '__main__':
     import json
     google_maps = GoogleMaps()
     result_recommendation_list = google_maps.get_address_recommendation(query='51.996162, 4.354135', language='en')
-    message_location=json.dumps(result_recommendation_list[0]['formatted_address'])
-    print (message_location)
-
-#Location =
-#Videolink =
-#itchat.send(u'FIXME%d, %s, be careful'%(Location, Videolink), toUserName='username')\
-
-#Modify here
-
-Videolink = "111"
-message_content = message_location + Videolink
-
-#itchat.send(message_location, Videolink, toUserName = contact_person)
-itchat.send('https://www.youtube.com/watch?v=QTDrIONw2M0', toUserName = contact_person)
-#itchat.send(message_content, toUserName = contact_person)
-
-
-itchat.run()
+    pincode_city = google_maps.get_pincode_city(22.547143, 114.062753)
+    #print(list_reverse_geocode[0]['formatted_address'])
+    print (json.dumps(result_recommendation_list[0]['formatted_address']))
+    #print ('*'*100)
+    #print (pincode_city)
