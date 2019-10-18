@@ -13,8 +13,9 @@ import sys
 fourcc = cv2.VideoWriter_fourcc(*'MJPG')
 #fourcc = cv2.VideoWriter_fourcc(*'X264')
 
+f = "/home/pi/Prototype/video"
 try:
-    os.makedirs("/home/pi/Prototype/video")
+    os.makedirs(f)
 except FileExistsError:
     # directory already exists
     pass
@@ -22,38 +23,39 @@ except FileExistsError:
 cap = cv2.VideoCapture(0)
 cur_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
+
 start = time.time()
 
-video_file = os.path.join("video", "1" + ".avi")
+video_file = f + "/1.avi"
 print("Capture video saved location : {}".format(video_file))
 
 # Create a video write before entering the loop
+out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
+# ret, frame = cap.read()
+# cv2.imshow("frame", frame)
 # out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
-ret, frame = cap.read()
-cv2.imshow("frame", frame)
-cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
-cv2.VideoWriter.write(frame)
+# out.write(frame)
 
 #
-# while cap.isOpened():
-#     start_time = time.time()
-#     ret, frame = cap.read()
-#     if ret == True:
-#         cv2.imshow("frame", frame)
-#         if time.time() - start > 10: #Every ten seconds save the video in created directory file
-#             start = time.time()
-#
-#             video_file = os.path.join("video", "1" + ".mp4")
-#             out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
-#             # No sleeping! We don't want to sleep, we want to write
-#             # time.sleep(10)
-#
-#         # Write the frame to the current video writer
-#         out.write(frame)
-#         if cv2.waitKey(1) & 0xFF == ord("q"):
-#             break
-#     else:
-#         break
+while cap.isOpened():
+    start_time = time.time()
+    ret, frame = cap.read()
+    if ret == True:
+        cv2.imshow("frame", frame)
+        if time.time() - start > 10: #Every ten seconds save the video in created directory file
+            start = time.time()
+
+            #video_file = os.path.join("video", "1" + ".mp4")
+            out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
+            # No sleeping! We don't want to sleep, we want to write
+            # time.sleep(10)
+
+        # Write the frame to the current video writer
+        out.write(frame)
+        if cv2.waitKey(1) & 0xFF == ord("q"):
+            break
+    else:
+        break
 
 cap.release()
 # out.release()
