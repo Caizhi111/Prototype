@@ -20,4 +20,4 @@ except KeyError:
 video_prop = my_thing.find_or_create_property("video", PropertyType.VIDEO)
 
 
-my_thing.update_property_http(video_prop, "/home/pi/Prototype/cavideo/1.mp4")
+my_thing.update_property_http(video_prop, "/home/pi/Prototype/'cavideo\'/1.mp4")
