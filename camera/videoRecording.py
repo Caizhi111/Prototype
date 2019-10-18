@@ -10,8 +10,8 @@ import os
 import random
 import sys
 
-fourcc = cv2.VideoWriter_fourcc(*'MJPG')
-#fourcc = cv2.VideoWriter_fourcc(*'X264')
+#fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+fourcc = cv2.VideoWriter_fourcc(*'X264')
 
 try:
     os.makedirs("/home/pi/Prototype/video")
@@ -24,7 +24,7 @@ cur_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
 start = time.time()
 
-video_file = os.path.join("video", "1" + ".avi")
+video_file = os.path.join("video", "1" + ".mp4")
 print("Capture video saved location : {}".format(video_file))
 
 # Create a video write before entering the loop
@@ -38,7 +38,7 @@ while cap.isOpened():
         if time.time() - start > 10: #Every ten seconds save the video in created directory file
             start = time.time()
 
-            video_file = os.path.join("video", "1" + ".avi")
+            video_file = os.path.join("video", "1" + ".mp4")
             out = cv2.VideoWriter(video_file, fourcc, 24, (640, 480))
             # No sleeping! We don't want to sleep, we want to write
             # time.sleep(10)
