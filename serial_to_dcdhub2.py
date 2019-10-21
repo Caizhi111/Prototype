@@ -45,9 +45,14 @@ def serial_to_property_values():
         values = line.split(',')
         # Use the first element of the list as property id
         property_name = values.pop(0)
+        prop = None
         # Get the property from the thing
-        prop = my_thing.find_or_create_property(property_name,
-                                                PropertyType.ACCELEROMETER)
+        if (property_name == "Wheelchair acceleration"):
+            prop = my_thing.find_or_create_property(property_name,
+                                                    PropertyType.ACCELEROMETER)
+        elif (property_name == "GPS"):
+            prop = my_thing.find_or_create_property(property_name,
+                                                    PropertyType.LOCATION)
         # If we find the property, we update the values (rest of the list)
         if prop is not None:
             prop.update_values([float(val) for val in values])
