@@ -53,7 +53,7 @@ def serial_to_property_values():
             prop.update_values([float(val) for val in values])
         # Otherwise, we show a warning
         else:
-            print('Warning: unknown property ' + property_id)
+            print('Warning: unknown property ')
 
 while True:
     serial_to_property_values()
