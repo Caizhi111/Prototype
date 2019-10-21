@@ -47,7 +47,7 @@ def serial_to_property_values():
         property_name = values.pop(0)
         prop = None
         # Get the property from the thing
-        if (property_name == "Wheelchair acceleration")：
+        if (property_name == "Wheelchair acceleration"):
             prop = my_thing.find_or_create_property(property_name,
                                                     PropertyType.ACCELEROMETER)
         elif (property_name == "GPS"):
