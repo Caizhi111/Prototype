@@ -44,17 +44,18 @@ def serial_to_property_values():
         # Split the string using commas as separator, we get a list of strings
         values = line.split(',')
         # Use the first element of the list as property id
-        property_name_accer = values.pop(0)
-        property_name_gps = values.pop(4)
+        property_name = values.pop(0)
+        prop = None
         # Get the property from the thing
-        prop_accer = my_thing.find_or_create_property(property_name_accer,
-                                                PropertyType.ACCELEROMETER)
-        prop_gps = my_thing.find_or_create_property(property_name_gps,
-                                                PropertyType.TWO_DIMENSIONS)
+        if (property_name == "Wheelchair acceleration")：
+            prop = my_thing.find_or_create_property(property_name,
+                                                    PropertyType.ACCELEROMETER)
+        elif (property_name == "GPS"):
+            prop = my_thing.find_or_create_property(property_name,
+                                                    PropertyType.LOCATION)
         # If we find the property, we update the values (rest of the list)
-        if prop_accer is not None:
-            prop_accer.update_values([values.pop[1:3]])
-            prop_gps.update_values([values.pop[4:5]])
+        if prop is not None:
+            prop.update_values([float(val) for val in values])
         # Otherwise, we show a warning
         else:
             print('Warning: unknown property ' + property_id)
