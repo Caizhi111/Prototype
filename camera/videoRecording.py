@@ -10,10 +10,10 @@ import os
 import random
 import sys
 
-fourcc = cv2.VideoWriter_fourcc(*'MJPG')
-#fourcc = cv2.VideoWriter_fourcc(*'X264')
+#fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+fourcc = cv2.VideoWriter_fourcc(*'X264')
 
-path = "/home/pi/Prototype/video"
+path = "/home/pi/Prototype/web/static/video"
 
 try:
     os.makedirs(path)
@@ -27,7 +27,7 @@ cur_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
 start = time.time()
 
-video_file = path + "/1.avi"
+video_file = path + "/video.mp4"
 print("Capture video saved location : {}".format(video_file))
 
 # Create a video write before entering the loop
