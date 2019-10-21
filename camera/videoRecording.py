@@ -39,7 +39,7 @@ while cap.isOpened():
     ret, frame = cap.read()
     if ret == True:
         cv2.imshow("frame", frame)
-        if time.time() - start > 10: #Every ten seconds save the video in created directory file
+        if time.time() - start > 50: #Every ten seconds save the video in created directory file
             start = time.time()
 
             path = "/home/pi/Prototype/web/static/video"
