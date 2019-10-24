@@ -17,7 +17,7 @@ my_thing.read()
 
 print(my_thing.to_json())
 
-my_property = my_thing.find_or_create_property("My Random Property",
+my_property = my_thing.find_or_create_property("My Random Property",l
                                                PropertyType.THREE_DIMENSIONS)
 print(my_property.to_json())
 
