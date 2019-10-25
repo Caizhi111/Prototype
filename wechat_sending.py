@@ -205,7 +205,7 @@ if __name__ == '__main__':
 Videolink = "http://145.94.154.29:5000/static/video/video.mp4"
 message_content_1 = "There is a likely accident happened to the wheelchair user, the location is as follows:"
 message_content_2 = reverse_geocode_results[0]["formatted_address"]
-message_content_3 = "Check the recorded video" + Videolink
+message_content_3 = "Check the recorded video:" + Videolink
 
 #itchat.send(message_location, Videolink, toUserName = contact_person)
 itchat.send(message_content_1, toUserName = contact_person)
