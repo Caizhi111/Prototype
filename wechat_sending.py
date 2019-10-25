@@ -42,7 +42,6 @@ try:
 except KeyError:
     print("nothing")
 
-# prop1 = my_thing.read_property('wheelchair-acceleration-4afe', from_ts, to_ts)
 # prop = my_thing.properties[prop1.property_id]
 # print('--')
 # print(prop.values[0][1:4])
@@ -52,6 +51,11 @@ prop = my_thing.properties[prop1.property_id]
 print('--')
 # print(prop.values[0][1])
 # loc = *prop.values[0][1:3], sep=','
+
+##prop2 = my_thing.read_property('EULER', from_ts, to_ts)
+##prop_acceleration = my_thing.properties[prop2.property_id]
+##print(prop_acceleration.values[1][2][3])
+
 
 itchat.auto_login(hotReload=True)
 
@@ -206,6 +210,10 @@ Videolink = "http://145.94.154.29:5000/static/video/video.mp4"
 message_content_1 = "There is a likely accident happened to the wheelchair user, the location is as follows:"
 message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
+
+##if prop_acceleration.value[1]
+##prop_acceleration.value[2]
+##prop_acceleration.value[3]
 
 #itchat.send(message_location, Videolink, toUserName = contact_person)
 itchat.send(message_content_1, toUserName = contact_person)
