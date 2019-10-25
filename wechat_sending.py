@@ -48,6 +48,7 @@ except KeyError:
 # print(prop.values[0][1:4])
 
 prop1 = my_thing.read_property('gps-92d6', from_ts, to_ts)
+#这个是property id， 可以改
 prop = my_thing.properties[prop1.property_id]
 print('--')
 # print(prop.values[0][1])
@@ -56,6 +57,7 @@ print('--')
 itchat.auto_login(hotReload=True)
 
 users = itchat.search_friends(name = '何雨菲')
+#微信联系人的昵称
 #contact = u'ai'
 contact_person = users[0]['UserName']
 print(contact_person)
