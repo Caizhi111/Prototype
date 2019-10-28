@@ -4,9 +4,6 @@ from dotenv import load_dotenv
 import os
 import signal
 import datetime
-import itchat
-from googleplaces import GooglePlaces
-import googlemaps
 import sys
 from imp import reload
 
