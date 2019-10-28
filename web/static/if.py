@@ -35,4 +35,4 @@ prop1 = my_thing.read_property('gps-92d6', from_ts, to_ts)
 prop = my_thing.properties[prop1.property_id]
 
 if prop.value[1]>0:
-    print(prop[1][2])
+    print(prop.value[1][2])
