@@ -13,8 +13,6 @@ reload(sys)
 END_DATE1 = datetime.datetime.now()
 END_DATE = END_DATE1.replace(microsecond=0)
 START_DATE = END_DATE - datetime.timedelta(hours = 100)
-print(START_DATE)
-print(END_DATE)
 
 from datetime import datetime
 DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
@@ -33,9 +31,8 @@ try:
 except KeyError:
     print("nothing")
 
-prop2 = my_thing.read_property('euler-7b32', from_ts, to_ts)
-prop_euler = my_thing.properties[prop2.property_id]
-print(prop_euler.values[1][2][3])
+prop1 = my_thing.read_property('gps-92d6', from_ts, to_ts)
+prop = my_thing.properties[prop1.property_id]
 
-if prop_euler.value[1]>0:
-    print(prop_euler.value[1])
+if prop.value[1]>0:
+    print(prop[1][2])
