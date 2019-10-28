@@ -55,10 +55,6 @@ def serial_to_property_values():
         else:
             print('Warning: unknown property ')
 
-#trying
-        if value.pop(1)>0
-        os.system('python3 ./wechat_sending.py &')
-
 
 while True:
     serial_to_property_values()
