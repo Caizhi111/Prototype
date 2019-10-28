@@ -53,9 +53,9 @@ print('--')
 # print(prop.values[0][1])
 # loc = *prop.values[0][1:3], sep=','
 
-##prop2 = my_thing.read_property('EULER', from_ts, to_ts)
-##prop_acceleration = my_thing.properties[prop2.property_id]
-##print(prop_acceleration.values[1][2][3])
+prop2 = my_thing.read_property('http://euler-7b32', from_ts, to_ts)
+prop_acceleration = my_thing.properties[prop2.property_id]
+print(prop_acceleration.values[1][2][3])
 
 
 itchat.auto_login(hotReload=True)
@@ -212,18 +212,18 @@ message_content_1 = "There is a likely accident happened to the wheelchair user,
 message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
 
-##if prop_acceleration.value[1]
+if prop_acceleration.value[1]>0:
 ##prop_acceleration.value[2]
 ##prop_acceleration.value[3]
 
 #itchat.send(message_location, Videolink, toUserName = contact_person)
-itchat.send(message_content_1, toUserName = contact_person)
-itchat.send(message_content_2, toUserName = contact_person)
-itchat.send(message_content_3, toUserName = contact_person)
+    itchat.send(message_content_1, toUserName = contact_person)
+    itchat.send(message_content_2, toUserName = contact_person)
+    itchat.send(message_content_3, toUserName = contact_person)
 #itchat.send(message_content, toUserName = contact_person)
 
 
-itchat.run()
+    itchat.run()
 
 
 # Register our Keyboard handler to exit
