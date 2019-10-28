@@ -46,6 +46,7 @@ except KeyError:
 # print('--')
 # print(prop.values[0][1:4])
 
+#读取dcdhub上面的gps数据， 哪段时间里面的数据
 prop1 = my_thing.read_property('gps-92d6', from_ts, to_ts)
 prop = my_thing.properties[prop1.property_id]
 print('--')
@@ -59,7 +60,7 @@ print('--')
 
 itchat.auto_login(hotReload=True)
 
-users = itchat.search_friends(name = '何雨菲')
+users = itchat.search_friends(name = '刘益伶')
 #contact = u'ai'
 contact_person = users[0]['UserName']
 print(contact_person)
