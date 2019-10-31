@@ -58,4 +58,9 @@ prop_acceleration = my_thing.properties[prop2.property_id]
 print('--------')
 print(prop_acceleration.values[0])
 print(prop_acceleration)
+
+pos = prop_acceleration.values[0]
+if float(pos[1]) > 0:
+    print('yes')
+    
 print('--')
