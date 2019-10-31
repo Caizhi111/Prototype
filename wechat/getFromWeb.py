@@ -56,5 +56,6 @@ print('--')
 prop2 = my_thing.read_property('euler-7b32', from_ts, to_ts)
 prop_acceleration = my_thing.properties[prop2.property_id]
 print('--------')
+print(prop_acceleration.values[0])
 print(prop_acceleration)
 print('--')
