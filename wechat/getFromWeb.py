@@ -59,8 +59,10 @@ print('--------')
 print(prop_acceleration.values[0])
 print(prop_acceleration)
 
-pos = prop_acceleration.values[0]
-if float(pos[1]) > 0 and float(pos[2]) > 0:
+pos = prop_acceleration.values[0]#视情况把【0】去掉
+if float(pos[1]) > 0 and float(pos[2]) < 0:
+    print(pos[1])
+    print(pos[2])
     print('yes')
 else:
     print('no')
