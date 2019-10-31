@@ -60,7 +60,9 @@ print(prop_acceleration.values[0])
 print(prop_acceleration)
 
 pos = prop_acceleration.values[0]
-if float(pos[1]) > 0:
+if float(pos[1]) > 0 and float(pos[2]) > 0:
     print('yes')
-    
+else:
+    print('no')
+
 print('--')
