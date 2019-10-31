@@ -55,7 +55,7 @@ print('--')
 
 prop2 = my_thing.read_property('euler-7b32', from_ts, to_ts)
 prop_acceleration = my_thing.properties[prop2.property_id]
-print(prop_acceleration.values[1][2][3])
+print('--')
 
 
 itchat.auto_login(hotReload=True)
@@ -212,10 +212,12 @@ message_content_1 = "There is a likely accident happened to the wheelchair user,
 message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
 
+print(prop_acceleration.value[1])
+
 if prop_acceleration.value[1]>0:
 ##prop_acceleration.value[2]
 ##prop_acceleration.value[3]
-
+    print("yes")
 #itchat.send(message_location, Videolink, toUserName = contact_person)
     itchat.send(message_content_1, toUserName = contact_person)
     itchat.send(message_content_2, toUserName = contact_person)
