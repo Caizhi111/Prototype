@@ -54,7 +54,7 @@ print('--')
 # loc = *prop.values[0][1:3], sep=','
 
 prop2 = my_thing.read_property('EULER', from_ts, to_ts)
-prop_acceleration = my_thing.properties[prop2.property_id]
+prop_EULER = my_thing.properties[prop2.property_id]
 print('--')
 
 
@@ -212,12 +212,8 @@ message_content_1 = "There is a likely accident happened to the wheelchair user,
 message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
 
-print(prop_acceleration.value[1])
-
-if prop_acceleration.value[1]>0:
-##prop_acceleration.value[2]
-##prop_acceleration.value[3]
-    print("yes")
+pos = prop_EULER.values[0]#跟【0】没关系，别去
+if float(pos[1]) > 0 and float(pos[2]) < 0:
 #itchat.send(message_location, Videolink, toUserName = contact_person)
     itchat.send(message_content_1, toUserName = contact_person)
     itchat.send(message_content_2, toUserName = contact_person)
