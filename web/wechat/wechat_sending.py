@@ -222,13 +222,13 @@ count = 0
 print("1")
 #     if abs(float(pos[2])+1.12) >60 or abs(float(pos[3])+7.81)>60:
 #         print("2")
-    # itchat.send(message_location, Videolink, toUserName = contact_person)
-    itchat.send(message_content_1, toUserName = contact_person)
-    itchat.send(message_content_2, toUserName = contact_person)
-    itchat.send(message_content_3, toUserName = contact_person)
-    # itchat.send(message_content, toUserName = contact_person)
+        # itchat.send(message_location, Videolink, toUserName = contact_person)
+        itchat.send(message_content_1, toUserName = contact_person)
+        itchat.send(message_content_2, toUserName = contact_person)
+        itchat.send(message_content_3, toUserName = contact_person)
+        # itchat.send(message_content, toUserName = contact_person)
 
-    itchat.run()
+        itchat.run()
 
 # else:
     # print("I'm fine")
