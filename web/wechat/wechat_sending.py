@@ -213,7 +213,8 @@ message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
 
 pos = prop_EULER.values[0]#跟【0】没关系，别去
-if float(pos[1]) > 0 and float(pos[2]) < 0:
+if abs(float(pos[1])-359.19) > 80 or abs(float(pos[2])+1.12) >80 or abs(float(pos[3])+7.81)>80:
+
 #itchat.send(message_location, Videolink, toUserName = contact_person)
     itchat.send(message_content_1, toUserName = contact_person)
     itchat.send(message_content_2, toUserName = contact_person)
