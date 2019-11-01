@@ -29,7 +29,6 @@ to_ts = datetime.timestamp(datetime.strptime(str(END_DATE), DATE_FORMAT))*1000
 print(from_ts)
 print(to_ts)
 
-
 load_dotenv()
 THING_ID = os.environ['THING_ID']
 THING_TOKEN = os.environ['THING_TOKEN']
@@ -221,15 +220,15 @@ print(pos[3])
 count = 0
 while count < 1:
     print("1")
-    if abs(float(pos[2])+1.12) >60 or abs(float(pos[3])+7.81)>60:
-        print("2")
-#itchat.send(message_location, Videolink, toUserName = contact_person)
-        itchat.send(message_content_1, toUserName = contact_person)
-        itchat.send(message_content_2, toUserName = contact_person)
-        itchat.send(message_content_3, toUserName = contact_person)
-#itchat.send(message_content, toUserName = contact_person)
-
-        itchat.run()
+#     if abs(float(pos[2])+1.12) >60 or abs(float(pos[3])+7.81)>60:
+#         print("2")
+# #itchat.send(message_location, Videolink, toUserName = contact_person)
+#         itchat.send(message_content_1, toUserName = contact_person)
+#         itchat.send(message_content_2, toUserName = contact_person)
+#         itchat.send(message_content_3, toUserName = contact_person)
+# #itchat.send(message_content, toUserName = contact_person)
+#
+#         itchat.run()
 
 else:
     print("I'm fine")
