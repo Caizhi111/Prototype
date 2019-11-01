@@ -213,6 +213,11 @@ message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
 
 pos = prop_EULER.values[0]#跟【0】没关系，别去
+
+print(pos[1])
+print(pos[2])
+print(pos[3])
+
 if abs(float(pos[1])-359.19) > 80 or abs(float(pos[2])+1.12) >80 or abs(float(pos[3])+7.81)>80:
 
 #itchat.send(message_location, Videolink, toUserName = contact_person)
@@ -222,7 +227,8 @@ if abs(float(pos[1])-359.19) > 80 or abs(float(pos[2])+1.12) >80 or abs(float(po
 #itchat.send(message_content, toUserName = contact_person)
 
     itchat.run()
-
+else:
+    print("I'm fine")
 # Register our Keyboard handler to exit
 
 
