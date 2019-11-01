@@ -219,7 +219,7 @@ print(pos[3])
 
 count = 0
 # while count < 1:
-    print("1")
+print("1")
     if abs(float(pos[2])+1.12) >60 or abs(float(pos[3])+7.81)>60:
         print("2")
 #itchat.send(message_location, Videolink, toUserName = contact_person)
