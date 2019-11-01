@@ -221,7 +221,7 @@ if abs(float(pos[1])-359.19) > 80 or abs(float(pos[2])+1.12) >80 or abs(float(po
     itchat.send(message_content_3, toUserName = contact_person)
 #itchat.send(message_content, toUserName = contact_person)
 
-itchat.run()
+    itchat.run()
 
 # Register our Keyboard handler to exit
 
