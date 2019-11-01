@@ -207,7 +207,7 @@ if __name__ == '__main__':
 
 #Modify here
 
-Videolink = "http://145.94.154.29:5000/static/video/video.mp4"
+Videolink = "http://145.94.153.90:5000/static/video/video.mp4"
 message_content_1 = "There is a likely accident happened to the wheelchair user, the location is as follows:"
 message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
@@ -218,7 +218,7 @@ print(pos[1])
 print(pos[2])
 print(pos[3])
 
-if abs(float(pos[1])-359.19) > 80 or abs(float(pos[2])+1.12) >80 or abs(float(pos[3])+7.81)>80:
+if aabs(float(pos[2])+1.12) >60 or abs(float(pos[3])+7.81)>60:
 
 #itchat.send(message_location, Videolink, toUserName = contact_person)
     itchat.send(message_content_1, toUserName = contact_person)
