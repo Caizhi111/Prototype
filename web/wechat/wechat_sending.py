@@ -229,13 +229,12 @@ message_content_3 = "Check the recorded video:" + Videolink
 
 pos = prop_EULER.values[0]
 
-print(pos[1])
-print(pos[2])
-print(pos[3])
-
 count = 0
 # while count < 1:
 while(True):
+    print(pos[1])
+    print(pos[2])
+    print(pos[3])
     print("Condition not Satisfied")
     if abs(float(pos[2]) > 60 ) or ( abs(float(pos[3])) > 60 :
         print("Condition Satisfied")
