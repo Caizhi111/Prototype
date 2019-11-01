@@ -147,7 +147,7 @@ if __name__ == '__main__':
     # 使用实例
     import json
     google_maps = GoogleMaps()
-    result_recommendation_list = google_maps.get_address_recommendation(query='51.996162, 4.354135', language='en')
+    result_recommendation_list = google_maps.get_address_recommendation(query='52.002, 4.3696', language='en')
     message_location=json.dumps(result_recommendation_list[0]['formatted_address'])
     print (message_location)
 
@@ -161,7 +161,7 @@ Videolink = "111"
 message_content = message_location + Videolink
 
 #itchat.send(message_location, Videolink, toUserName = contact_person)
-itchat.send('https://www.youtube.com/watch?v=QTDrIONw2M0', toUserName = contact_person)
+itchat.send(message_content, toUserName = contact_person)
 #itchat.send(message_content, toUserName = contact_person)
 
 

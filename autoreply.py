@@ -1,6 +1,6 @@
 import itchat
 
-itchat.auto_login(hotReload=True)
+itchat.auto_login(enableCmdQR=True)
 
 print(itchat.search_friends(name = '何雨菲'))
 users = itchat.search_friends(name = '何雨菲')
