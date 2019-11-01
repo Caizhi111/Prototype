@@ -47,13 +47,13 @@ except KeyError:
 # print(prop.values[0][1:4])
 
 #读取dcdhub上面的gps数据， 哪段时间里面的数据
-prop1 = my_thing.read_property('GPS', from_ts, to_ts)
+prop1 = my_thing.read_property('gps-92d6', from_ts, to_ts)
 prop = my_thing.properties[prop1.property_id]
 print('--')
 # print(prop.values[0][1])
 # loc = *prop.values[0][1:3], sep=','
 
-prop2 = my_thing.read_property('EULER', from_ts, to_ts)
+prop2 = my_thing.read_property('euler-7b32', from_ts, to_ts)
 prop_EULER = my_thing.properties[prop2.property_id]
 print('--')
 
