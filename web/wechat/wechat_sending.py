@@ -219,7 +219,7 @@ print(pos[2])
 print(pos[3])
 
 count = 0
-while (count<1):
+while count<1:
     if abs(float(pos[2])+1.12) >60 or abs(float(pos[3])+7.81)>60:
 
 #itchat.send(message_location, Videolink, toUserName = contact_person)
@@ -229,10 +229,10 @@ while (count<1):
 #itchat.send(message_content, toUserName = contact_person)
 
     itchat.run()
+
 else:
     print("I'm fine")
 # Register our Keyboard handler to exit
-
 
 def keyboard_interrupt_handler(signal_num):
     """Make sure we close our program properly"""
