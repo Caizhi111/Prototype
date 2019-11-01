@@ -218,7 +218,7 @@ print(pos[1])
 print(pos[2])
 print(pos[3])
 
-if aabs(float(pos[2])+1.12) >60 or abs(float(pos[3])+7.81)>60:
+if abs(float(pos[2])+1.12) >60 or abs(float(pos[3])+7.81)>60:
 
 #itchat.send(message_location, Videolink, toUserName = contact_person)
     itchat.send(message_content_1, toUserName = contact_person)
