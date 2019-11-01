@@ -42,22 +42,25 @@ try:
 except KeyError:
     print("nothing")
 
-# prop1 = my_thing.read_property('wheelchair-acceleration-4afe', from_ts, to_ts)
 # prop = my_thing.properties[prop1.property_id]
 # print('--')
 # print(prop.values[0][1:4])
 
-prop1 = my_thing.read_property('gps-92d6', from_ts, to_ts)
-#这个是property id， 可以改
+#读取dcdhub上面的gps数据， 哪段时间里面的数据
+prop1 = my_thing.read_property('GPS', from_ts, to_ts)
 prop = my_thing.properties[prop1.property_id]
 print('--')
 # print(prop.values[0][1])
 # loc = *prop.values[0][1:3], sep=','
 
+prop2 = my_thing.read_property('EULER', from_ts, to_ts)
+prop_EULER = my_thing.properties[prop2.property_id]
+print('--')
+
+
 itchat.auto_login(hotReload=True)
 
-users = itchat.search_friends(name = '何雨菲')
-#微信联系人的昵称
+users = itchat.search_friends(name = '刘益伶')
 #contact = u'ai'
 contact_person = users[0]['UserName']
 print(contact_person)
@@ -209,14 +212,16 @@ message_content_1 = "There is a likely accident happened to the wheelchair user,
 message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
 
+pos = prop_EULER.values[0]#跟【0】没关系，别去
+if float(pos[1]) > 0 and float(pos[2]) < 0:
 #itchat.send(message_location, Videolink, toUserName = contact_person)
-itchat.send(message_content_1, toUserName = contact_person)
-itchat.send(message_content_2, toUserName = contact_person)
-itchat.send(message_content_3, toUserName = contact_person)
+    itchat.send(message_content_1, toUserName = contact_person)
+    itchat.send(message_content_2, toUserName = contact_person)
+    itchat.send(message_content_3, toUserName = contact_person)
 #itchat.send(message_content, toUserName = contact_person)
 
 
-itchat.run()
+    itchat.run()
 
 
 # Register our Keyboard handler to exit

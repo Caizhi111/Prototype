@@ -47,13 +47,14 @@ def serial_to_property_values():
         property_name = values.pop(0)
         # Get the property from the thing
         prop = my_thing.find_or_create_property(property_name,
-                                                PropertyType.ACCELEROMETER)
+                                                PropertyType.EULER)
         # If we find the property, we update the values (rest of the list)
         if prop is not None:
             prop.update_values([float(val) for val in values])
         # Otherwise, we show a warning
         else:
             print('Warning: unknown property ')
+
 
 while True:
     serial_to_property_values()

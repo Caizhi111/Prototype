@@ -70,7 +70,11 @@ def keyboard_interrupt_handler(signal_num):
 
 # Instantiate a thing with its credential, then read its properties from the DCD Hub
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
-my_thing.read()
+try:
+    my_thing.read()
+
+except KeyError:
+    print("nothing")
 
 # Start a BLE adapter
 bleAdapter = pygatt.GATTToolBackend()
