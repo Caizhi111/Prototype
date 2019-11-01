@@ -64,6 +64,21 @@ users = itchat.search_friends(name = '刘益伶')
 contact_person = users[0]['UserName']
 print(contact_person)
 
+
+
+# else:
+    # print("I'm fine")
+# Register our Keyboard handler to exit
+
+def keyboard_interrupt_handler(signal_num):
+    """Make sure we close our program properly"""
+    print("Exiting...".format(signal_num))
+    exit(0)
+
+
+signal.signal(signal.SIGINT, keyboard_interrupt_handler)
+
+
 class GoogleMaps(object):
     """提供google maps服务"""
 
@@ -211,7 +226,7 @@ message_content_1 = "There is a likely accident happened to the wheelchair user,
 message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
 
-pos = prop_EULER.values[0]#跟【0】没关系，别去
+pos = prop_EULER.values[0]
 
 print(pos[1])
 print(pos[2])
@@ -219,25 +234,15 @@ print(pos[3])
 
 count = 0
 # while count < 1:
-print("1")
-# if abs(float(pos[2])+1.12) >60 or abs(float(pos[3])+7.81)>60:
-#     print("2")
-#itchat.send(message_location, Videolink, toUserName = contact_person)
-itchat.send(message_content_1, toUserName = contact_person)
-itchat.send(message_content_2, toUserName = contact_person)
-itchat.send(message_content_3, toUserName = contact_person)
-#itchat.send(message_content, toUserName = contact_person)
+while(True)：
+    print("1")
+    if abs(float(pos[2])+ 1.12) > 60 or  abs(float(pos[3])+7.81) > 60 :
 
-itchat.run()
+        print("2")
+    #itchat.send(message_location, Videolink, toUserName = contact_person)
+        itchat.send(message_content_1, toUserName = contact_person)
+        itchat.send(message_content_2, toUserName = contact_person)
+        itchat.send(message_content_3, toUserName = contact_person)
+    #itchat.send(message_content, toUserName = contact_person)
 
-# else:
-    # print("I'm fine")
-# Register our Keyboard handler to exit
-
-def keyboard_interrupt_handler(signal_num):
-    """Make sure we close our program properly"""
-    print("Exiting...".format(signal_num))
-    exit(0)
-
-
-signal.signal(signal.SIGINT, keyboard_interrupt_handler)
+        itchat.run()
