@@ -236,7 +236,7 @@ while(True):
     print(pos[2])
     print(pos[3])
     print("Condition not Satisfied")
-    if abs(float(pos[2]) > 60 ) or ( abs(float(pos[3])) > 60 :
+    if (abs(float(pos[2]))> 60 ) or ( abs(float(pos[3])) > 60) :
         print("Condition Satisfied")
     #itchat.send(message_location, Videolink, toUserName = contact_person)
         itchat.send(message_content_1, toUserName = contact_person)
