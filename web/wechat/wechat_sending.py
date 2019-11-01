@@ -218,20 +218,20 @@ print(pos[1])
 print(pos[2])
 print(pos[3])
 
-if abs(float(pos[2])+1.12) >60 or abs(float(pos[3])+7.81)>60:
+#make a loop
+if abs(float(pos[2])) > 60 or abs(float(pos[3])) > 60:
 
-#itchat.send(message_location, Videolink, toUserName = contact_person)
-    itchat.send(message_content_1, toUserName = contact_person)
-    itchat.send(message_content_2, toUserName = contact_person)
-    itchat.send(message_content_3, toUserName = contact_person)
-#itchat.send(message_content, toUserName = contact_person)
+        #itchat.send(message_location, Videolink, toUserName = contact_person)
+        itchat.send(message_content_1, toUserName = contact_person)
+        itchat.send(message_content_2, toUserName = contact_person)
+        itchat.send(message_content_3, toUserName = contact_person)
+        #itchat.send(message_content, toUserName = contact_person)
 
-    itchat.run()
+        itchat.run()
 else:
-    print("I'm fine")
+        print("I'm fine")
+
 # Register our Keyboard handler to exit
-
-
 def keyboard_interrupt_handler(signal_num):
     """Make sure we close our program properly"""
     print("Exiting...".format(signal_num))
