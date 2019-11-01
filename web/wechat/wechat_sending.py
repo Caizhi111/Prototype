@@ -228,7 +228,7 @@ itchat.send(message_content_2, toUserName = contact_person)
 itchat.send(message_content_3, toUserName = contact_person)
 #itchat.send(message_content, toUserName = contact_person)
 
-    itchat.run()
+itchat.run()
 
 # else:
     # print("I'm fine")
