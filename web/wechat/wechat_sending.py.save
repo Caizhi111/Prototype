@@ -3,7 +3,6 @@ from dcd.entities.property import PropertyType, Property
 from dotenv import load_dotenv
 import os
 import signal
-from time import sleep
 import datetime
 import itchat
 from googleplaces import GooglePlaces
@@ -235,11 +234,10 @@ print(pos[3])
 
 count = 0
 # while count < 1:
-while(True):
-    print("Condition not Satisfied")
-    if (abs(float(pos[2])+ 1.12) > 60 ) or ( abs(float(pos[3])+7.81) > 60 ) :
+while(True)：
++ 1.12) > 60 or  abs(float(pos[3])+7.81) > 60 :
 
-        print("Condition Satisfied")
+        print("2")
     #itchat.send(message_location, Videolink, toUserName = contact_person)
         itchat.send(message_content_1, toUserName = contact_person)
         itchat.send(message_content_2, toUserName = contact_person)
@@ -247,4 +245,3 @@ while(True):
     #itchat.send(message_content, toUserName = contact_person)
 
         itchat.run()
-    sleep(1)
