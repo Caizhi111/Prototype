@@ -29,7 +29,6 @@ to_ts = datetime.timestamp(datetime.strptime(str(END_DATE), DATE_FORMAT))*1000
 print(from_ts)
 print(to_ts)
 
-
 load_dotenv()
 THING_ID = os.environ['THING_ID']
 THING_TOKEN = os.environ['THING_TOKEN']
