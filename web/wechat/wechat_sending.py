@@ -227,11 +227,12 @@ message_content_1 = "There is a likely accident happened to the wheelchair user,
 message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
 
-pos = prop_EULER.values[-1]
+
 
 count = 0
 # while count < 1:
 while(True):
+    pos = prop_EULER.values[-1]
     print(pos[1])
     print(pos[2])
     print(pos[3])
