@@ -227,7 +227,7 @@ message_content_1 = "There is a likely accident happened to the wheelchair user,
 message_content_2 = reverse_geocode_results[0]["formatted_address"]
 message_content_3 = "Check the recorded video:" + Videolink
 
-pos = prop_EULER.values[0]
+pos = prop_EULER.values[-1]
 
 count = 0
 # while count < 1:
@@ -236,7 +236,7 @@ while(True):
     print(pos[2])
     print(pos[3])
     print("Condition not Satisfied")
-    if (abs(float(pos[2]))> 60 ) or ( abs(float(pos[3])) > 60) :
+    if abs(float(pos[2]))> 60  or abs(float(pos[3])) > 60 :
         print("Condition Satisfied")
     #itchat.send(message_location, Videolink, toUserName = contact_person)
         itchat.send(message_content_1, toUserName = contact_person)
