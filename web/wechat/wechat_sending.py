@@ -10,6 +10,7 @@ from googleplaces import GooglePlaces
 import googlemaps
 import sys
 from imp import reload
+from datetime import datetime
 
 reload(sys)
 
@@ -197,9 +198,6 @@ while(True):
     #print(START_DATE)
     #print(END_DATE)
 
-
-
-    from datetime import datetime
     DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
     from_ts = datetime.timestamp(datetime.strptime(str(START_DATE), DATE_FORMAT))*1000
     to_ts = datetime.timestamp(datetime.strptime(str(END_DATE), DATE_FORMAT))*1000
