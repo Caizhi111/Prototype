@@ -41,7 +41,7 @@ except KeyError:
 # print('--')
 # print(prop.values[0][1:4])
 
-itchat.auto_login(hotReload=True,enableCmdQR=True)
+itchat.auto_login(enableCmdQR=True)
 
 users = itchat.search_friends(name = '刘益伶')
 #contact = u'ai'
