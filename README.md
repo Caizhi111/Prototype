@@ -27,6 +27,7 @@ Our team aims to create an alarming system for the care givers of the wheelchair
 - Landbergstraat 5, 2628 CE Delft, Netherlands
 - Check the recorded video:http://145.94.153.90:5000/static/video/video.mp4
 
+
 Python code on Raspberry Pi:
   - videoRecording.py (path: -------------------------------)
   - serial_to_dcdhub2.py (path: ---------------------------------)
