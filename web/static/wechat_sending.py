@@ -11,24 +11,19 @@ import googlemaps
 import sys
 from imp import reload
 
+
 reload(sys)
 
-
-END_DATE1 = datetime.datetime.now()
+END_DATE1 = datetime.datetime.now() + datetime.timedelta(hours = 24)
 END_DATE = END_DATE1.replace(microsecond=0)
 START_DATE = END_DATE - datetime.timedelta(hours = 100)
-print(START_DATE)
-print(END_DATE)
-
-
+    #print(START_DATE)
+    #print(END_DATE)
 
 from datetime import datetime
 DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
 from_ts = datetime.timestamp(datetime.strptime(str(START_DATE), DATE_FORMAT))*1000
 to_ts = datetime.timestamp(datetime.strptime(str(END_DATE), DATE_FORMAT))*1000
-
-print(from_ts)
-print(to_ts)
 
 load_dotenv()
 THING_ID = os.environ['THING_ID']
@@ -45,18 +40,6 @@ except KeyError:
 # prop = my_thing.properties[prop1.property_id]
 # print('--')
 # print(prop.values[0][1:4])
-
-#读取dcdhub上面的gps数据， 哪段时间里面的数据
-prop1 = my_thing.read_property('gps-92d6', from_ts, to_ts)
-prop = my_thing.properties[prop1.property_id]
-print('--')
-# print(prop.values[0][1])
-# loc = *prop.values[0][1:3], sep=','
-
-prop2 = my_thing.read_property('euler-7b32', from_ts, to_ts)
-prop_EULER = my_thing.properties[prop2.property_id]
-print('--')
-
 
 itchat.auto_login(hotReload=True)
 
@@ -210,41 +193,56 @@ class GoogleMaps(object):
                 list_return_info.append(result_geocode)
         return list_return_info
 
-if __name__ == '__main__':
-    # 使用实例
-    import json
-    gmaps = googlemaps.Client(key="AIzaSyDviAQA75uBKrDAHylBtMBkUxztPAUhKeg")
-    reverse_geocode_results = gmaps.reverse_geocode((prop.values[0][1], prop.values[0][2]))
-    print (reverse_geocode_results[0]["formatted_address"])
+
 #Location =
 #Videolink =
 #itchat.send(u'FIXME%d, %s, be careful'%(Location, Videolink), toUserName='username')\
 
 #Modify here
 
-Videolink = "http://145.94.153.90:5000/static/video/video.mp4"
-message_content_1 = "There is a likely accident happened to the wheelchair user, the location is as follows:"
-message_content_2 = reverse_geocode_results[0]["formatted_address"]
-message_content_3 = "Check the recorded video:" + Videolink
-
-pos = prop_EULER.values[0]
-
 count = 0
 # while count < 1:
 while(True):
+    #读取dcdhub上面的gps数据， 哪段时间里面的数据
+    prop1 = my_thing.read_property('gps-92d6', from_ts, to_ts)
+    prop = my_thing.properties[prop1.property_id]
+    #print('--')
+    # print(prop.values[0][1])
+    # loc = *prop.values[0][1:3], sep=','
+
+    prop2 = my_thing.read_property('euler-7b32', from_ts, to_ts)
+    prop_EULER = my_thing.properties[prop2.property_id]
+    #print('--')
+
+
+
+    pos = prop_EULER.values[-1]
     print(pos[1])
     print(pos[2])
     print(pos[3])
     print("Condition not Satisfied")
-    if (abs(float(pos[2]))> 60 ) or ( abs(float(pos[3])) > 60) :
+
+    if abs(float(pos[2]))> 60  or abs(float(pos[3])) > 60 :
         print("Condition Satisfied")
     #itchat.send(message_location, Videolink, toUserName = contact_person)
-        itchat.send(message_content_1, toUserName = contact
 
-        _person)
+        if __name__ == '__main__':
+        # 使用实例
+            import json
+            gmaps = googlemaps.Client(key="AIzaSyDviAQA75uBKrDAHylBtMBkUxztPAUhKeg")
+            reverse_geocode_results = gmaps.reverse_geocode((prop.values[-1][1], prop.values[-1][2]))
+            print (reverse_geocode_results[0]["formatted_address"])
+
+        Videolink = "http://145.94.153.90:5000/static/video/video.mp4"
+        message_content_1 = "There is a likely accident happened to the wheelchair user, the location is as follows:"
+        message_content_2 = reverse_geocode_results[0]["formatted_address"]
+        message_content_3 = "Check the recorded video:" + Videolink
+
+        itchat.send(message_content_1, toUserName = contact_person)
         itchat.send(message_content_2, toUserName = contact_person)
         itchat.send(message_content_3, toUserName = contact_person)
     #itchat.send(message_content, toUserName = contact_person)
-
-        itchat.run()
+        itchat.run(blockThread=False)
+        continue
+    print("fuck")
     sleep(1)
