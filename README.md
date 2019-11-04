@@ -3,7 +3,7 @@ ID 5415 Prototyping connected products, IDE faculty, TU Delft
 | By Group 9: Zhi Cai, Yiling Liu, Yufei He
 
 # Design Context
----------------------------------------Add image of Design Context--------------------------------------------
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/Design%20Context.jpeg?raw=true)
 
 # Design Brief
 Our team aims to create an alarming system for the care givers of the wheelchair users. It detects and records fall-down accidents of the wheelchair that may be risky for the users during outdoor activities, which enables their care givers to receive the notification and location, thus react to the situation in time.
@@ -29,10 +29,10 @@ Our team aims to create an alarming system for the care givers of the wheelchair
 
 
 Python code on Raspberry Pi:
-  - videoRecording.py (path: -------------------------------)
-  - serial_to_dcdhub2.py (path: ---------------------------------)
-  - wechat_sending.py (path: -------------------------------)
-  - server.py (path: ----------------------------------)
+  - videoRecording.py (path: Prototype/serial_to_dcdhub2.py)
+  - serial_to_dcdhub2.py (path: Protoype/camera/videoRecording.py)
+  - wechat_sending.py (path: Prototype/web/static/wechat/wechat_sending.py )
+  - server.py (path: Prototype/web/server.py)
   
 Arduino code:
   - sketch_oct04b.ino
@@ -65,7 +65,7 @@ eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzA0MzYwODgsImV4cCI6MTg4NjAxNTY
 
 # week 1.1
 Brainstorm and decide design direction. (see file Inter-connected wheelchair.pdf)
----------------------------------------Add image of Initial IoT Architecture--------------------------------------------
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/Initial%20IoT%20Architecture.jpg?raw=true)
 
 Other potential design directions:
 - Navigation system for wheelshair users
