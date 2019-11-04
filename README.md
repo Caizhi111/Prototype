@@ -15,7 +15,7 @@ Our team aims to create an alarming system for the care givers of the wheelchair
 - Others: Arduino Mega, Raspberry Pi, Power bank
 
 # IoT Architecture
-![alt text](https://raw.githubusercontent.com/Caizhi111/Prototype/blob/master/IoT%20Architecture.jpeg)
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/IoT%20Architecture.jpeg?raw=true)
 
 # How the prototype works
 1. Find a envrionment with both eduroam and GPS signal.
