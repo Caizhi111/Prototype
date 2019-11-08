@@ -22,6 +22,9 @@ Our team aims to create an alarming system for the care givers of the wheelchair
 - Cloud Server: DCD hub
 - Others: Arduino Mega, Raspberry Pi, Power bank
 
+# Arduino schematic
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/Arduino%20schematics.png?raw=true)
+
 # IoT Architecture
 ![alt text](https://github.com/Caizhi111/Prototype/blob/master/IoT%20Architecture.jpeg?raw=true)
 
@@ -29,7 +32,7 @@ Our team aims to create an alarming system for the care givers of the wheelchair
 1. Find a envrionment with both eduroam and GPS signal.
 2. After the Raspberry Pi is powered on by the power bank, type in "./auto_run.sh" in the terminal. 
 3. Then, the wheelchair user needs to scan the QR code in Wechat. 
-4. After successfully scaning the QR code, the wheelchair user can press the button on the breadboard to start the sensors. Blinking white led means the GPS has no signal, and a lighted white led without blinking means the GPS is working properly. 
+4. After successfully scaning the QR code, the wheelchair user can press the button on the breadboard to turn on the sensors. Blinking white led means the GPS has no signal, and a lighted white led without blinking means the GPS is working properly. The lighted blue led shows that the IMU sensor is working properly. 
 5. When the wheelchair user falls down, the specified people in their Wechat account will receive three messages, such as follows:
 - There is a likely accident happened to the wheelchair user, the location is as follows:
 - Landbergstraat 5, 2628 CE Delft, Netherlands
