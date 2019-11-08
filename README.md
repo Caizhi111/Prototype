@@ -90,6 +90,7 @@ Exploration on sensors and actuators:
 ![alt text](https://github.com/Caizhi111/Prototype/blob/master/Actuators.jpeg?raw=true)
 
 
+
 # week 1.2
 Changes in the IoT structure:
   - a physical button to turn on/off the device instead of automatical switch enabled by FSR
@@ -100,6 +101,7 @@ Changes in the IoT structure:
 We achieved:
   - Set up an IMU sensor on Arduino
   - Bluetooth connection between IMU and our phone via Adafruit Feather. We can check the IMU data on an app called eBeacon.
+  
 
 # week 1.3
 Changes in the IoT structure:
@@ -122,6 +124,9 @@ We achieved:
 Challenges remained:
   - Send the video via the instant messenger
   - The location cannot be open in the map embedded in Wechat, which means the users needs to copy the address and paste in google map to search the location.
+  
+Camera:
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/DSC00010.jpg)
     
 # week 1.5
 We achieved:
@@ -132,6 +137,10 @@ We achieved:
 
 Challenges remained:
   - The signal of the GPS is often blocked inside a bulding. Maybe add antennas.
+  
+GPS module and IMU:
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/DSC00019.jpg)
+
 
 # week 1.6
 Changes in the IoT structure:
