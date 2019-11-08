@@ -6,6 +6,9 @@ ID 5415 Prototyping connected products, IDE faculty, TU Delft
 https://drive.google.com/open?id=1U6dykhN0eDotX_F5fxs2396cdGym8p--
 https://drive.google.com/open?id=1E0v_8iJ1IGYeomsYGjJwX7aWqiKgnjtD
 
+# Final prototype
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/DSC00029.JPG)
+
 # Design Context
 ![alt text](https://github.com/Caizhi111/Prototype/blob/master/Design%20Context.jpeg?raw=true)
 
