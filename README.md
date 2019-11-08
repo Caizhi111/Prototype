@@ -12,7 +12,7 @@ https://drive.google.com/open?id=1E0v_8iJ1IGYeomsYGjJwX7aWqiKgnjtD
 # Design Brief
 Our team aims to create an alarming system for the care givers of the wheelchair users. It detects and records fall-down accidents of the wheelchair that may be risky for the users during outdoor activities, which enables their care givers to receive the notification and location, thus react to the situation in time.
 
-# Selection of Sensors and Actuators
+# Final decision on Sensors and Actuators
 - Sensors: Button, IMU, GPS
 - Actuators: LED, Camera, Web page, Instant Messenger(Wechat)
 - Cloud Server: DCD hub
@@ -29,7 +29,7 @@ Our team aims to create an alarming system for the care givers of the wheelchair
 5. When the wheelchair user falls down, the specified people in their Wechat account will receive three messages, such as follows:
 - There is a likely accident happened to the wheelchair user, the location is as follows:
 - Landbergstraat 5, 2628 CE Delft, Netherlands
-- Check the recorded video:http://145.94.153.90:5000/static/video/video.mp4
+- Check the recorded video:http://145.94.153.90:5000/static/video/video.mp4 (can only be accessed when server.py is running)
 
 
 Python code on Raspberry Pi:
@@ -80,6 +80,11 @@ When accidents happens when wheelchair users doing indoor acticities, such as go
 Since wheelchair users usually keep the sitting gesture, a game is designed for motivating them to exercise more.
 - Balancing system for steep slope:
 When wheelchair users go uphill and downhill, their body position is perpendicular to slope instead of the horizontal plane, which might result in uncomfortable and turning over. A balancing system is designed for keeping their body position is always perpendicular to the horizontal plane.
+
+Exploration on sensors and actuators:
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/sensors.jpeg?raw=true)
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/Actuators.jpeg?raw=true)
+
 
 # week 1.2
 Changes in the IoT structure:
