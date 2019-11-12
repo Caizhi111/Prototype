@@ -23,7 +23,7 @@ Our team aims to create an alarming system for the care givers of the wheelchair
 - Others: Arduino Mega, Raspberry Pi, Power bank
 
 # Arduino schematic
-![alt text](https://github.com/Caizhi111/Prototype/blob/master/Arduino%20schematic.png?raw=true)
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/Arduino%20schematics.png?raw=true)
 
 # IoT Architecture
 ![alt text](https://github.com/Caizhi111/Prototype/blob/master/IoT%20Architecture.jpeg?raw=true)
