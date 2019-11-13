@@ -26,7 +26,7 @@ Our team aims to create an alarming system for the care givers of the wheelchair
 ![alt text](https://github.com/Caizhi111/Prototype/blob/master/Arduino%20schematics.png?raw=true)
 
 # IoT Architecture
-![alt text](https://github.com/Caizhi111/Prototype/blob/master/IoT%20Architecture.jpeg?raw=true)
+![alt text](https://github.com/Caizhi111/Prototype/blob/master/IoT%20Architecture.png?raw=true)
 
 # How the prototype works
 1. Find a envrionment with both eduroam and GPS signal.
