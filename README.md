@@ -3,9 +3,9 @@ ID 5415 Prototyping connected products, IDE faculty, TU Delft
 | By Group 9: Zhi Cai, Yiling Liu, Yufei He
 
 # Videos
-Concept explanation: https://drive.google.com/open?id=1U6dykhN0eDotX_F5fxs2396cdGym8p--
+Prototype demonstration: https://drive.google.com/open?id=1U6dykhN0eDotX_F5fxs2396cdGym8p--
 
-Prototype demonstration: https://drive.google.com/open?id=1E0v_8iJ1IGYeomsYGjJwX7aWqiKgnjtD
+Concept explanation: https://drive.google.com/open?id=1E0v_8iJ1IGYeomsYGjJwX7aWqiKgnjtD
 
 # The model
 ![alt text](https://github.com/Caizhi111/Prototype/blob/master/DSC00029.JPG)
